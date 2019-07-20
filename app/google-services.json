@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "837795185624",
+    "firebase_url": "https://rubaexpress2.firebaseio.com",
+    "project_id": "rubaexpress2",
+    "storage_bucket": "rubaexpress2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:837795185624:android:8b21480135bdce56",
+        "android_client_info": {
+          "package_name": "com.example.rubaexpress"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "837795185624-pta5lvu4j3vr1jjo91ah8ma78lap3pna.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rubaexpress",
+            "certificate_hash": "f84b57ebe54e3a963c3a31c6657e3ffb7dec0ebd"
+          }
+        },
+        {
+          "client_id": "837795185624-9oq3ctbsktonvt2181r0k90q7hsmgtl0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUCJ3ASN_00bfB2KLQMSvnl0BAQLfXs4Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "837795185624-9oq3ctbsktonvt2181r0k90q7hsmgtl0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
