@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AdminCategoryActivity">
+    tools:context=".Admin.AdminCategoryActivity">
     
     <TextView
         android:id="@+id/slogan_category"
@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="27dp"
+        android:layout_marginTop="10dp"
         android:text="Add New Product"
         android:textAlignment="center"
         android:textSize="26sp"
@@ -21,10 +21,10 @@
     <LinearLayout
         android:id="@+id/Linear1_category_layout"
         android:layout_width="match_parent"
-        android:layout_height="105dp"
+        android:layout_height="100dp"
         android:layout_below="@id/slogan_category"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -59,10 +59,10 @@
     <LinearLayout
         android:id="@+id/Linear2_category_layout"
         android:layout_width="match_parent"
-        android:layout_height="105dp"
+        android:layout_height="100dp"
         android:layout_below="@+id/Linear1_category_layout"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="5dp"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -96,11 +96,10 @@
     <LinearLayout
         android:id="@+id/Linear3_category_layout"
         android:layout_width="match_parent"
-        android:layout_height="105dp"
+        android:layout_height="100dp"
         android:layout_below="@+id/Linear2_category_layout"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="0dp"
+        android:layout_marginTop="5dp"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -132,13 +131,13 @@
 
     </LinearLayout>
 
-    <LinearLayout
+  <LinearLayout
         android:id="@+id/Linear4_category_layout"
         android:layout_width="match_parent"
-        android:layout_height="105dp"
+        android:layout_height="100dp"
         android:layout_below="@+id/Linear3_category_layout"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="5dp"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -172,10 +171,10 @@
     <LinearLayout
         android:id="@+id/Linear5_category_layout"
         android:layout_width="match_parent"
-        android:layout_height="105dp"
+        android:layout_height="100dp"
         android:layout_below="@+id/Linear4_category_layout"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="5dp"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -206,6 +205,49 @@
 
     </LinearLayout>
 
+    <Button
+        android:id="@+id/maintain_btn"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_above="@+id/check_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="103dp"
+        android:background="@color/colorPrimary"
+        android:text="Maintain Products"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/check_btn"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_above="@+id/admin_logout_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="55dp"
+        android:background="@color/colorPrimary"
+        android:text="Check New Order"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/admin_logout_btn"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="7dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Logout"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
 
 
 

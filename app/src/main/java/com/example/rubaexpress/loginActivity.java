@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.rubaexpress.Admin.AdminCategoryActivity;
 import com.example.rubaexpress.Model.Users;
 import com.example.rubaexpress.Prevalent.Prevalent;
 import com.google.firebase.database.DataSnapshot;
@@ -32,7 +33,7 @@ public class loginActivity extends AppCompatActivity
     private ProgressDialog LoadingBar;
     private  String ParentDBName = "Users";
     private CheckBox checkBoxRememberMe;
-    private TextView AdminLink, NotAdminLink;
+    private TextView AdminLink, NotAdminLink, ForgetPasswordLink;
 
 
     @Override
@@ -40,11 +41,13 @@ public class loginActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-         LoginButton= (Button) findViewById(R.id.login_btn);
+        LoginButton= (Button) findViewById(R.id.login_btn);
         InputPhoneNumber = (EditText) findViewById(R.id.login_phone_number_input);
         InputPassword = (EditText) findViewById(R.id.login_password_input);
         AdminLink = (TextView) findViewById(R.id.admin_panel_link);
         NotAdminLink = (TextView) findViewById(R.id.not_admin_panel_link);
+        ForgetPasswordLink = findViewById(R.id.forget_password_link);
+       
         LoadingBar = new ProgressDialog(this);
 
         checkBoxRememberMe = (CheckBox) findViewById(R.id.remember_me_chkb);
@@ -57,7 +60,19 @@ public class loginActivity extends AppCompatActivity
                 loginUser();
             }
         });
-
+    
+        ForgetPasswordLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent = new Intent(loginActivity.this, ResetPasswordActivity.class);
+                intent.putExtra("check", "login");
+                startActivity(intent);
+            }
+        });
+    
+    
+    
         AdminLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)
@@ -138,8 +153,8 @@ public class loginActivity extends AppCompatActivity
                            {
                                Toast.makeText(loginActivity.this, "Welcome Admin,you are logged in successfully...", Toast.LENGTH_SHORT).show();
                                LoadingBar.dismiss();
-
-                               Intent intent = new Intent(loginActivity.this,AdminCategoryActivity.class);
+ 
+                               Intent intent = new Intent(loginActivity.this, AdminCategoryActivity.class);
                                startActivity(intent);
                            }
                            else if (ParentDBName.equals("Users"))
@@ -148,6 +163,7 @@ public class loginActivity extends AppCompatActivity
                                LoadingBar.dismiss();
 
                                Intent intent = new Intent(loginActivity.this,HomeActivity.class);
+                               Prevalent.currentOnlineUsers = usersData;
                                startActivity(intent);
                            }
 

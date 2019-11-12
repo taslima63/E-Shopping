@@ -1,11 +1,16 @@
-package com.example.rubaexpress;
+package com.example.rubaexpress.Admin;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+
+import com.example.rubaexpress.HomeActivity;
+import com.example.rubaexpress.MainActivity;
+import com.example.rubaexpress.R;
 
 public class AdminCategoryActivity extends AppCompatActivity
 {
@@ -15,12 +20,56 @@ public class AdminCategoryActivity extends AppCompatActivity
     private ImageView Camera, Headphone, Laptop, Phones;
     private ImageView HomeAppliances, Kitchenware,Hat,Watches;
 
+    private Button Logoutbtn, CheckOrderbtn, maintainProductsbtn;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_category);
 
-
+        
+        
+        Logoutbtn = (Button) findViewById(R.id.admin_logout_btn);
+        CheckOrderbtn = (Button) findViewById(R.id.check_btn);
+        maintainProductsbtn = (Button) findViewById(R.id.maintain_btn);
+    
+        
+        maintainProductsbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent = new Intent(AdminCategoryActivity.this, HomeActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+                
+            }
+        });
+        
+        
+        Logoutbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent = new Intent(AdminCategoryActivity.this, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+                finish();
+            }
+            
+        });
+        
+        CheckOrderbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent = new Intent(AdminCategoryActivity.this, AdminNewOrderActivity.class);
+                
+                startActivity(intent);
+        
+            }
+        });
+        
+        
         Tshirts = (ImageView) findViewById(R.id.t_shirts);
         Sportsshirts = (ImageView) findViewById(R.id.sports_t_shirts);
         FemaleDresses = (ImageView) findViewById(R.id.female_dresses);

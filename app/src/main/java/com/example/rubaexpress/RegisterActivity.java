@@ -94,8 +94,10 @@ public class RegisterActivity extends AppCompatActivity {
         RootRef.addListenerForSingleValueEvent(new ValueEventListener()
         {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if (!(dataSnapshot.child("Users").child(phone).exists())) {
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot)
+            {
+                if (!(dataSnapshot.child("Users").child(phone).exists()))
+                {
                     HashMap<String, Object> userdataMap = new HashMap<>();
                     userdataMap.put("phone", phone);
                     userdataMap.put("password", password);
